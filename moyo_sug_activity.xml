@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#C4C1C1"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="#C4C1C1"
+        android:layout_alignEnd="@+id/coordinator1"
+        android:layout_alignStart="@+id/coordinator1"
+        android:layout_marginTop="10dp"
+        android:id="@+id/relaTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:contentDescription="@android:string/cancel"
+            android:enabled="false"
+            android:textColor="#C4C1C1"
+            android:layout_alignBottom="@+id/searchBar"
+            android:text="SEARCH"
+            android:id="@+id/searchButton"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_search_save"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp" />
+        <AutoCompleteTextView
+            android:textCursorDrawable="@drawable/cursor_color_blue"
+            android:inputType="textCapSentences|textNoSuggestions|textAutoComplete|textShortMessage"
+            android:maxLength="21"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="0dp"
+            android:layout_toStartOf="@+id/searchButton"
+            android:backgroundTint="#C4C1C1"
+            android:id="@+id/searchBar"
+            android:textColorHint="@color/White"
+            android:layout_toEndOf="@+id/btn_backHome"
+            android:hint="@string/search_disease"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:contentDescription="@android:string/cancel"
+            android:layout_alignBottom="@+id/searchBar"
+            android:id="@+id/btn_backHome"
+            android:background="#C4C1C1"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/ic_homewhite"
+            android:layout_height="35dp" />
+    </RelativeLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/relaTop"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/coordinator1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#e6e6e6">
+        <RelativeLayout
+            android:id="@+id/Relativeabove"
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+            <RelativeLayout
+                android:id="@+id/secondRelative"
+                android:background="@drawable/moyo_round_shapen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ScrollView
+                        android:background="@mipmap/ic_suggestion_back"
+                        android:layout_marginTop="3dp"
+                        android:id="@+id/RelativeHealth"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+                    <EditText
+                        android:textCursorDrawable="@drawable/cursor_color"
+                            android:backgroundTint="@android:color/transparent"
+                            android:maxLength="250"
+                            android:textColorHighlight="@color/black"
+                            android:autofillHints="@android:string/cancel"
+                            android:textSize="18sp"
+                            android:textColor="#093145"
+                            android:textColorHint="#093145"
+                            android:id="@+id/edi_input_health"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:hint="@string/suggestion"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:maxLines="5" />
+                    </ScrollView>
+
+
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/secondRelative"
+                android:id="@+id/btn_save_health"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/btn_heathy_save"
+                android:enabled="false"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:text="@string/send"
+                android:textColor="#e6e6e6" />
+        </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="#DFDDDD"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="0dp"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginTop="2dp"
+                    android:layout_toStartOf="@+id/textSroll"
+                    android:id="@+id/buttonShare"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_share"/>
+                <ImageView
+                    android:layout_margin="3dp"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/clearSearch"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_clearsearch"/>
+                <ImageView
+                    android:layout_below="@+id/textSroll"
+                    android:background="#DFDDDD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher_ask"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/searchResult"/>
+                <ScrollView
+                    android:layout_below="@+id/clearSearch"
+                    android:layout_toEndOf="@+id/searchResult"
+                    android:background="@drawable/resultbackground"
+                    android:id="@+id/textSroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:padding="10dp"
+                        android:includeFontPadding="true"
+                        android:lines="8"
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+                        android:id="@+id/textShow"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </ScrollView>
+
+
+
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

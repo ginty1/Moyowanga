@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#D5D0D0"
+    android:layout_height="match_parent">
+       <ImageButton
+           android:src="@mipmap/ic_homewhite"
+           android:background="#D8D0D0"
+           android:layout_centerHorizontal="true"
+           android:id="@+id/btn_saveBackHome"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+    <RelativeLayout
+            android:layout_below="@+id/btn_saveBackHome"
+            android:id="@+id/reTop"
+            android:layout_marginTop="2dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:id="@+id/inTop"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:contentDescription="@android:string/cancel"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/personalName"
+                android:layout_width="wrap_content"
+                android:id="@+id/imageName"
+                android:background="@color/white"
+                android:src="@mipmap/ic_checkname"
+                android:layout_height="wrap_content" />
+            <ImageButton
+
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/ic_checkdateofb"
+                android:layout_alignBottom="@+id/personalDOB"
+                android:id="@+id/imageDob"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="wrap_content" />
+            <MultiAutoCompleteTextView
+                android:textCursorDrawable="@drawable/cursor_color_blue"
+                android:backgroundTint="#388E3C"
+                android:id="@+id/personalName"
+                android:maxLength="25"
+                android:textSize="18sp"
+                android:textColorHint="#388E3C"
+                android:textColor="#388E3C"
+                android:layout_width="250dp"
+                android:fontFamily="@font/abeezee"
+                android:inputType="text|textCapSentences|textNoSuggestions|textCapWords"
+                android:hint="@string/fnd"
+                android:layout_height="wrap_content" />
+            <EditText
+               android:textCursorDrawable="@drawable/cursor_color_blue"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#18C2A8"
+                android:layout_below="@+id/personalName"
+                android:id="@+id/personalIdNo"
+                android:textSize="15sp"
+                android:textColor="#18C2A8"
+                android:maxLength="10"
+                android:textColorHint="#18C2A8"
+                android:layout_width="250dp"
+                android:fontFamily="@font/abeezee"
+                android:inputType="text|textCapCharacters|textNoSuggestions|textShortMessage"
+                android:hint="@string/chiphaso"
+                android:layout_height="wrap_content" />
+            <ImageButton
+
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:src="@mipmap/ic_checknationalid"
+                android:layout_alignBottom="@+id/personalIdNo"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/saveNid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                 android:textCursorDrawable="@drawable/cursor_color_blue"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/personalIdNo"
+                app:backgroundTint="#81688B"
+                android:id="@+id/personalDOB"
+                android:maxLines="1"
+                android:textColorHint="#81688B"
+                android:fontFamily="@font/abeezee"
+                android:textSize="15sp"
+                android:textColor="#81688B"
+                android:maxLength="10"
+                android:layout_width="250dp"
+                android:inputType="text"
+                android:hint="@string/dob1"
+                android:layout_height="wrap_content" />
+            <ImageButton
+
+                android:layout_below="@+id/personalWelght"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:id="@+id/imageWeight"
+                android:src="@drawable/ic_weight"
+                android:background="@color/white"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_alignBottom="@+id/imageWeight"
+                android:layout_toEndOf="@+id/imageWeight"
+                android:text="@string/weight1"
+                android:textStyle="italic"
+                android:textColor="#AFB42B"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:id="@+id/texWeight"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+               android:textCursorDrawable="@drawable/cursor_color_blue"
+                android:textColorHint="#388E3C"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/personalDOB"
+                android:id="@+id/personalWelght"
+                android:layout_width="wrap_content"
+                android:inputType="number"
+                android:background="@color/white"
+                android:maxLength="3"
+                android:hint="@string/weight"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:contentDescription="@android:string/cancel"
+                android:layout_alignStart="@+id/personalHeight"
+                android:layout_alignEnd="@+id/personalHeight"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/personalHeight"
+                android:id="@+id/imageHeight"
+                android:background="@color/white"
+                android:src="@mipmap/ic_height"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/textHeight"
+                android:text="@string/height1"
+                android:textSize="12sp"
+                android:fontFamily="@font/alice"
+                android:textColor="#AFB42B"
+                android:layout_marginStart="2dp"
+                android:layout_alignBottom="@+id/imageHeight"
+                android:layout_toRightOf="@id/imageHeight"
+                android:layout_height="wrap_content" />
+
+            <EditText
+               android:textCursorDrawable="@drawable/cursor_color_blue"
+                android:background="@color/white"
+                android:layout_marginStart="8dp"
+                android:layout_alignBottom="@+id/personalWelght"
+                android:id="@+id/personalHeight"
+                android:layout_width="wrap_content"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="3"
+                android:textColorHint="#116111"
+                android:hint="@string/height"
+                android:layout_height="wrap_content" />
+            <ImageButton
+
+                android:layout_below="@+id/personalBloodPressure"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:src="@mipmap/ic_bp"
+                android:id="@+id/imageBloodP"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_alignBottom="@+id/imageBloodP"
+                android:layout_toStartOf="@+id/imageBloodP"
+                android:text="@string/bp1"
+                android:textSize="12sp"
+                android:textColor="#AFB42B"
+                android:id="@+id/textBp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:textColorHint="#388E3C"
+                android:background="@color/white"
+                android:layout_alignBottom="@+id/personalWelght"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/personalBloodPressure"
+                android:layout_width="wrap_content"
+                android:textAllCaps="false"
+                android:inputType="text"
+                android:maxLength="6"
+                android:textCursorDrawable="@drawable/cursor_color_blue"
+                android:layout_marginRight="5dp"
+                android:hint="@string/bp"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:textCursorDrawable="@drawable/cursor_color_blue"
+                android:textColorHint="#389F93"
+                android:background="@color/white"
+                android:layout_centerHorizontal="true"
+                android:maxLines="1"
+                android:layout_below="@+id/imageWeight"
+                android:id="@+id/personalDiabetic"
+                android:layout_width="wrap_content"
+                android:inputType="number"
+                android:hint="@string/sgl"
+                android:maxLength="3"
+                android:layout_height="wrap_content" />
+            <ImageButton
+
+                android:background="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/personalDiabetic"
+                android:src="@mipmap/ic_diabetics"
+                android:layout_width="wrap_content"
+                android:id="@+id/imageSugarL"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="@string/sugar_level"
+                android:textColor="#AFB42B"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:fontFamily="@font/alice"
+                android:layout_alignBottom="@+id/imageSugarL"
+                android:layout_toEndOf="@id/imageSugarL"
+                android:id="@+id/textBloodSugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="@dimen/activity2_horizontal_margin"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:fontFamily="@font/abeezee"
+        android:text="@string/save_by"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/reTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

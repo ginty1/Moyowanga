@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/seEnglish"
+        android:layout_marginTop="@dimen/activity2_horizontal_margin"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:text="@string/login_english"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_above="@+id/container"
+        android:text="@string/samplenumber"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/numberSample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <EditText
+            android:textCursorDrawable="@drawable/cursor_color_blue"
+            android:backgroundTint="#457b9d"
+            android:id="@+id/editTextMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:hint="@string/enter_number"
+            android:inputType="phone"
+            android:maxLength="13" />
+
+        <Button
+            android:id="@+id/buttonContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextMobile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="#457b9d"
+            android:text="@string/continue_"
+            android:textAllCaps="false"
+            android:textColor="#cdd8f1" />
+    </RelativeLayout>
+    <TextView
+        android:layout_below="@+id/container"
+        android:layout_marginTop="@dimen/activity2_horizontal_margin"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:text="@string/login_chichewa"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
